@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@1400&display=swap');
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #757676;
+    background-color: #ffffff;
 }
 h1{
     font-weight: 1000;
@@ -93,7 +93,7 @@ header .shopping span{
     left: calc(100% - 25%);
 }
 .active .container{
-    transform: translateX(-30%);
+    transform: translateX(-10%);
 }
 .list .item{
     text-align: center;

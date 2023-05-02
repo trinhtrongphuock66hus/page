@@ -59,7 +59,7 @@ function initApp(){
             <img src="${value.image}"/>
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
-            <button bottom="0px" onclick="addToCard(${key})">Buy</button>
+            <button onclick="addToCard(${key})">Buy</button>
         `;
         list.appendChild(newDiv);
     })
@@ -71,7 +71,7 @@ function addToCard(key){
         listCards[key].quantity = 1;
     }
     else{
-        changeQuantity1(key,value.quantity + 1);
+       
     }
     reloadCard();
 }
