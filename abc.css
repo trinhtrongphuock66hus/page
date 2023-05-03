@@ -3,7 +3,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
 }
-h1{
+a{
     font-weight: 1000;
     background-image: url("backgroundtext.jpg");
     -webkit-background-clip: text;
