@@ -16,48 +16,56 @@ let products = [
     {
         id: 1,
         name: 'Nhà giả kim',
+        fullname: 'Nhà giả kim',
         image: 'nhagiakim.webp',
         price: 79000
     },
     {
         id: 2,
         name: 'Tôi thấy hoa vàng trê..',
+        fullname: 'Tôi thấy hoa vàng trên cỏ xanh',
         image: 'toithayhoavangtrencoxanh.webp',
         price: 125000
     },
     {
         id: 3,
         name: 'Nghìn lẻ 1 đêm',
+        fullname: 'Nghìn lẻ 1 đêm',
         image: 'nl1d.webp',
         price: 758950
     },
     {
         id: 4,
         name: 'Dịch hạch',
+        fullname: 'Dịch hạch',
         image: 'dh.webp',
         price: 109000
     },
     {
         id: 5,
         name: 'Kiếp nào ta cũng t..',
+        fullname: 'Kiếp nào ta cũng tìm thấy nhau',
         image: 'kntcttn.webp',
         price: 75000
     },
     {
         id: 6,
         name: 'Nhân duyên tiền kiếp',
+        fullname: 'Nhân duyên tiền kiếp',
         image: 'ndtk.webp',
         price: 175500
     },
     {
         id: 7,
         name: 'Rừng sâu tăm tối',
+        fullname: 'Rừng sâu tăm tối',
         image: 'rstt.webp',
         price: 148500
     },
     {
         id: 8,
         name: 'Không phải sói như..',
+        fullname: 'Không phải sói nhưng cũng đừng là cừu',
         image: 'kpsncdlc.webp',
         price: 101000
     }
@@ -99,7 +107,7 @@ function reloadCard(){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
                 <div><img src="${value.image}"/></div>
-                <div>${value.name}</div>
+                <div>${value.fullname}</div>
                 <div>${value.price.toLocaleString()}</div>
                 <div>
                     <button onclick="changeQuantity(${key},${value.quantity - 1})">-</button>
