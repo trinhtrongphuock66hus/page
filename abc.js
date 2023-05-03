@@ -21,7 +21,7 @@ let products = [
     },
     {
         id: 2,
-        name: 'Tôi thấy hoa vàng trên cỏ xanh',
+        name: 'Tôi thấy hoa vàng trê..',
         image: 'toithayhoavangtrencoxanh.webp',
         price: 125000
     },
@@ -39,7 +39,7 @@ let products = [
     },
     {
         id: 5,
-        name: 'Kiếp nào ta cũng tìm thấy nhau',
+        name: 'Kiếp nào ta cũng t..',
         image: 'kntcttn.webp',
         price: 75000
     },
@@ -49,6 +49,18 @@ let products = [
         image: 'ndtk.webp',
         price: 175500
     },
+    {
+        id: 7,
+        name: 'Rừng sâu tăm tối',
+        image: 'rstt.webp',
+        price: 148500
+    },
+    {
+        id: 8,
+        name: 'Không phải sói như..',
+        image: 'kpsncdlc.webp',
+        price: 101000
+    }
 ];
 let listCards = [];
 function initApp(){
@@ -59,7 +71,7 @@ function initApp(){
             <img src="${value.image}"/>
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Buy</button>
+            <button onclick="addToCard(${key})">Mua</button>
         `;
         list.appendChild(newDiv);
     })

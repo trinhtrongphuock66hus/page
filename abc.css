@@ -45,7 +45,7 @@ header .shopping span{
 }
 .list{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     row-gap: 20px;
     margin-top: 50px;
@@ -64,13 +64,14 @@ header .shopping span{
     font-weight: 100;
     margin: 0;
     padding: 0 20px;
-    height: 80px;
+    height: 50px;
     display: flex;
     align-items: center;
 }
 .card .checkout{
     position: absolute;
     bottom: 0;
+    height: 10%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -103,11 +104,11 @@ header .shopping span{
     letter-spacing: 1px;
 }
 .list .item img{
-    width: 60%; 
+    width: 60%;
 }
 .list .item .title{
     margin-top: 10px;
-    font-weight: 700;
+    font-weight: 100;
 }
 .list .item .price{
     margin: 10px;
@@ -117,20 +118,26 @@ header .shopping span{
     color: #fff;
     padding: 10px;
     width: 100%;
+    border-radius: 4px;
+    
 }
 .listCard li{
     display: grid;
-    grid-template-columns: 70px repeat(3, 1fr);
+    grid-template-columns: 75px repeat(3, 1fr);
     color: #FFF;
     row-gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    overflow:auto;
 }
 .listCard li div{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 100;
+    font-size: small;
 }
 .listCard li img{
+    
     width: 70%;
 }
 .listCard button{
