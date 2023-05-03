@@ -46,8 +46,8 @@ header .shopping span{
 .list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 25px;
+    row-gap: 25px;
     margin-top: 50px;
 }
 .card{
@@ -74,7 +74,7 @@ header .shopping span{
     height: 10%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 .card .checkout div{
     background-color: #e8bc0e;
@@ -86,8 +86,12 @@ header .shopping span{
     font-weight: bold;
     cursor: pointer;
 }
-.card .checkout div:nth-child(2){
-    background-color: #1c1f25;
+.card .checkout a div:nth-child(1){
+    background-color: #ff3434;
+    color: #fff;
+}
+.card .checkout div:nth-child(3){
+    background-color: #1c2521;
     color: #fff;
 }
 .active .card{
