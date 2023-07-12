@@ -5,7 +5,7 @@ let listCard = document.querySelector('.listCard')
 let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
-
+let ten = document.querySelector('.name');
 openShopping.addEventListener('click',()=>{
     body.classList.add('active');
 })
@@ -91,7 +91,8 @@ function addToCard(key){
         listCards[key].quantity = 1;
     }
     else{
-       
+        listCards[key].quantity += 1;
+        listCards[key].price = listCards[key].quantity * products[key].price / (listCards[key].quantity-1);
     }
     reloadCard();
 }
