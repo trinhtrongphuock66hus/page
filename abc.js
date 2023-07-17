@@ -15,56 +15,48 @@ closeShopping.addEventListener('click', ()=>{
 let products = [
     {
         id: 1,
-        name: 'Nhà giả kim',
         fullname: 'Nhà giả kim',
         image: 'nhagiakim.webp',
         price: 79000
     },
     {
         id: 2,
-        name: 'Tôi thấy hoa vàng trê..',
         fullname: 'Tôi thấy hoa vàng trên cỏ xanh',
         image: 'toithayhoavangtrencoxanh.webp',
         price: 125000
     },
     {
         id: 3,
-        name: 'Nghìn lẻ 1 đêm',
         fullname: 'Nghìn lẻ 1 đêm',
         image: 'nl1d.webp',
         price: 758950
     },
     {
         id: 4,
-        name: 'Dịch hạch',
         fullname: 'Dịch hạch',
         image: 'dh.webp',
         price: 109000
     },
     {
         id: 5,
-        name: 'Kiếp nào ta cũng t..',
         fullname: 'Kiếp nào ta cũng tìm thấy nhau',
         image: 'kntcttn.webp',
         price: 75000
     },
     {
         id: 6,
-        name: 'Nhân duyên tiền kiếp',
         fullname: 'Nhân duyên tiền kiếp',
         image: 'ndtk.webp',
         price: 175500
     },
     {
         id: 7,
-        name: 'Rừng sâu tăm tối',
         fullname: 'Rừng sâu tăm tối',
         image: 'rstt.webp',
         price: 148500
     },
     {
         id: 8,
-        name: 'Không phải sói như..',
         fullname: 'Không phải sói nhưng cũng đừng là cừu',
         image: 'kpsncdlc.webp',
         price: 101000
@@ -77,7 +69,7 @@ function initApp(){
         newDiv.classList.add('item');
         newDiv.innerHTML = `
             <img src="${value.image}"/>
-            <div class="title">${value.name}</div>
+            <div class="title">${value.fullname}</div>
             <div class="price">${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">Mua</button>
         `;
@@ -137,3 +129,21 @@ function changeQuantity1(key, quantity){
     listCards[key].price = quantity * products[key].price / (quantity-1);
     reloadCard();
 }
+// Trong trang nhận
+// Trong trang nhận
+window.addEventListener('message', function(event) {
+    // Kiểm tra nguồn của thông điệp có phải là trang gửi không
+    if (event.origin === 'https://trinhtrongphuock66hus.github.io/ttpeeihus.github.io/') {
+      // Xử lý dữ liệu trong event.data
+      const username = event.data.username;
+      console.log('Received username:', username);
+  
+      // Thực hiện các hành động tiếp theo với username nhận được
+      // Ví dụ: Cập nhật giao diện người dùng với tên người dùng
+      let nameElement = document.querySelector('.name');
+      nameElement.textContent = username;
+    }
+  });
+  
+
+

@@ -1,156 +1,203 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@1400&display=swap');
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
+
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #ffffff;
+margin: 0;
+padding: 0;
 }
-a{
-    background-image: url("backgroundtext.jpg");
-    -webkit-background-clip: text;
-    color: transparent;
+
+a {
+background-image: url("backgroundtext.jpg");
+-webkit-background-clip: text;
+color: transparent;
 }
-.container{
-    width: 80%;
-    margin: auto;
-    transition: 0.4s;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    height:60px;
 }
-h1{
-    margin-top:10px;
+
+header h1,
+header .shopping,
+header .user-account {
 }
-header{
-    display: grid;
-    grid-template-columns: 1fr 50px;
+header .user-account {
+    padding-right:10px;
+}
+header h1{
+    padding-left: 10px;
+}
+header .shopping {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    cursor:pointer;
+}
+header .shopping ion-icon:nth-child(1) {
     margin-top: 10px;
-}
-header .shopping{
-    position: relative;
-    text-align: right;
-}
-header .shopping ion-icon:nth-child(1){
-    margin-top: 20px ;
-    width: 100%;
-}
-header img{
-    width: 50%;
-    height: 50%;
-}
-header .shopping span{
-    background-color: rgb(255, 114, 121);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    position: absolute;
-    top: 10px;
-    left: 25px;
-    padding: 2px 8px;
-}
-.list{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 25px;
-    row-gap: 25px;
-    margin-top: 20px;
-}
-.card{
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 25%;
-    background-color: #454e3b;
-    height: 100vh;
-    transition: 0.5s;
-}
-.card h1{
-    color: #eeeeee;
-    font-weight: 100;
-    margin: 0;
-    padding: 0 20px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-}
-.card .checkout{
-    position: absolute;
-    bottom: 0;
-    height: 10%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-.card .checkout div{
-    background-color: #53a7f7;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+    margin-right: 15px;
     cursor: pointer;
 }
-.card .checkout a div:nth-child(1){
-    background-color: #6ad6f7;
+header img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    header img {
+        width: 40%;
+        height: 40%;
+    }
+}
+header .shopping span {
+    background-color: rgb(255, 114, 121);
+    border-radius: 50%;
     color: #fff;
+    position: absolute;
+    border: rgb(24, 24, 24) solid 1px;
+    padding-left:6px;
+    padding-right:6px;
 }
-.card .checkout div:nth-child(3){
-    background-color: #1c2521;
-    color: #fff;
+    
+.name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}    
+.list {
+padding-left:10px;
+width: 100%-10px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 25px;
+margin-top: 20px;
+margin-bottom: 30px;
 }
-.active .card{
-    left: calc(100% - 25%);
+
+.card {
+position: fixed;
+top: 0;
+left: 100%;
+width: 25%;
+background-color: #454e3b;
+height: 100vh;
+transition: 0.5s;
 }
-.active .container{
-    transform: translateX(-10%);
+
+.card h1 {
+color: #eeeeee;
+font-weight: 100;
+margin: 0;
+padding: 0 20px;
+height: 50px;
+display: flex;
+align-items: center;
 }
-.list .item{
-    text-align: center;
-    background-color: #dce0e1;
-    padding: 20px;
-    box-shadow: 0 50px 50px #757676;
-    letter-spacing: 1px;
+
+.card .checkout {
+position: absolute;
+bottom: 0;
+height: 10%;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
 }
-.list .item img{
-    width: 60%;
+
+.card .checkout div {
+background-color: #53a7f7;
+width: 100%;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+cursor: pointer;
 }
-.list .item .title{
+
+.card .checkout a div:nth-child(1) {
+background-color: #6ad6f7;
+color: #fff;
+}
+
+.card .checkout div:nth-child(3) {
+background-color: #1c2521;
+color: #fff;
+}
+
+.active .card {
+left: calc(100% - 25%);
+}
+
+.active .container {
+transform: translateX(-10%);
+}
+
+.list .item {
+text-align: center;
+background-color: #dce0e1;
+padding: 20px;
+box-shadow: 0 50px 50px #757676;
+letter-spacing: 1px;
+}
+
+.list .item img {
+width: 60%;
+}
+
+.list .item .title {
     margin-top: 10px;
     font-weight: 100;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.list .item .price{
-    margin: 10px;
+
+.list .item .price {
+margin: 10px;
 }
-.list .item button{
-    background-color: #1c1f25;
-    color: #fff;
-    padding: 10px;
-    width: 100%;
-    border-radius: 4px;
-    
+
+.list .item button {
+background-color: #1c1f25;
+color: #fff;
+padding: 10px;
+width: 100%;
+border-radius: 4px;
 }
-.listCard li{
-    display: grid;
-    grid-template-columns: 75px repeat(3, 1fr);
-    color: #FFF;
-    row-gap: 10px;
-    margin-bottom: 10px;
-    overflow:auto;
+
+.listCard li {
+display: grid;
+grid-template-columns: 75px repeat(3, 1fr);
+color: #FFF;
+row-gap: 10px;
+margin-bottom: 10px;
+overflow: auto;
 }
-.listCard li div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 100;
-    font-size: small;
+
+.listCard li div {
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 100;
+font-size: small;
 }
-.listCard li img{
-    
-    width: 70%;
+
+.listCard li img {
+width: 70%;
 }
-.listCard button{
-    width: auto;
-    background-color: #fff5;
-    border: none;
+
+.listCard button {
+width: auto;
+background-color: #fff5;
+border: none;
 }
-.listCard .count{
-    margin: 0 10px;
+
+.listCard .count {
+margin: 0 10px;
 }
+
